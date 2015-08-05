@@ -1,0 +1,92 @@
+//////////
+//header//
+//////////
+header {
+}
+header h1 {
+	margin:		0px;
+	padding:	0px;
+}
+nav {
+	position:	relative;
+	top:		0px;
+	width:		100%;
+	background: 	#236E1D;
+	padding:	10px 7px 5px 17px;
+}
+////////
+//body//
+////////
+body {
+	background: 	#A1A1A1;	
+	padding: 	0px;
+	margin: 	0px;
+}
+//////////////////
+//table settings//
+//////////////////
+table {
+	position:	relative;
+	border:		0px solid white;
+}
+tr {
+	padding:	0px;
+	margin: 	0px;
+}
+th {
+	padding: 	0px;
+	margin: 	0px;
+}
+th a {
+	color:		#CCCCCC;
+}
+td a {
+	color:		#CCCCCC;
+
+}
+ .list_col {
+	background: 	#1C3307;
+}
+ .list_line_even {
+	background: 	#3D612C;
+}
+ .list_line_odd {
+	background: 	#638A3C;
+}
+/////////////////////
+//edit/new file box//
+/////////////////////
+#box {
+	padding:	0px;
+	margin:		30px;
+	border:		2px solid black;
+	border-radius:  5px;
+	box-shadow:	0px 1px 1px 0px;
+}
+#box h4 {
+	padding:	0px;
+	margin:		0px;
+	border-bottom:	1px solid black;
+	background:	#747474;
+	width:		100%;
+}
+/////////////////////////
+//edit/new file buttons//
+/////////////////////////
+#bottom_form {
+	padding:	15px 0px 0px 30px;
+}
+//////////////////
+//paragraph fix //
+//////////////////
+.paragraph_indent {
+	padding: 5px 0px 5px 20px;
+}
+//footer//
+//////////
+footer {
+	position:	fixed;
+	bottom:		0px;
+	width:		100%;
+	background: 	#B2B2B2;
+ }

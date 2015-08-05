@@ -1,0 +1,50 @@
+<header>
+  <nav>
+    <h1>Titan Signout Sheet</h1>
+    <p><em>Please provide needed info</em></p>
+  </nav>
+</header>
+
+  <div id="box" align="left">
+   <h4>Item signout form</h4>
+   <%=form_for :sout, url:souts_path do |f| %>
+      <p>
+
+          <% if @sout.errors.include?(:item_name) %>
+            <%= f.label :item_name %><font color=#FF0000><%= @sout.errors.full_messages_for(:item_name)[0] %></font>
+          <%else%>
+            <%= f.label :item_name %>
+          <% end %>
+
+        <%= f.text_field:item_name %> 
+      </p>
+
+     
+      <p>
+
+          <% if @sout.errors.include?(:borrowed_by) %>
+            <%= f.label :borrowed_by %><font color=#FF0000><%= @sout.errors.full_messages_for(:borrowed_by)[0] %></font>
+          <%else%>
+            <%= f.label :borrowed_by %>
+          <% end %>
+
+       <%= f.text_field:borrowed_by %> 
+     </p>
+
+     
+      <p>
+       <%= f.label :date_to_be_returned %>
+       <%= f.datetime_select :date_to_be_returned%>
+      </p>
+
+  </div>
+
+<div id="bottom_form">
+   <%= f.submit("Submit") %>
+   <% end %>
+   <%= button_to "Back", souts_path, method: :get %>
+</div>
+
+<footer>
+<h3>Titan Lenders Corp</h3>
+</footer>

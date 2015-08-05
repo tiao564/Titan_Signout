@@ -1,0 +1,33 @@
+<header>
+  <nav>
+  <h1>Titan Signout Sheet</h1>
+  <%= button_to 'Back', souts_path, method: :get %>
+  </nav>
+</header>
+
+<p class="paragraph_indent">
+  <strong><%= @sout.borrowed_by %></strong> has 
+  <strong><%= @sout.item_name %></strong>. It was signed out on 
+  <strong><%= @sout.date_borrowed %></strong>.
+</p>
+
+<table style="width:100%" class="sout_table">
+  <tr class="list_col">
+     <th>Item name</th>
+     <th>Borrowed by</th>
+     <th>Date borrowed</th>
+     <th>Date to be returned</th>
+     <th>Date returned</th>
+  </tr>
+
+  <tr class='list_line_odd'>
+     <td><%= @sout.item_name  %></td>
+     <td><%= @sout.borrowed_by  %></td>
+     <td><%= @sout.date_borrowed  %></td>
+     <td><%= @sout.date_to_be_returned  %></td>
+     <td><%= @sout.date_returned  %></td>
+  </tr>
+</table>
+<footer>
+<h3>Titan Lenders Corp</h3>
+</footer>

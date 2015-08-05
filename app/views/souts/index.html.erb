@@ -1,0 +1,42 @@
+<header>
+  <nav>
+   <h1>Titan Signout Sheet</h1>
+   <%= button_to "New signout", new_sout_path(@sout), method: :get %>
+  </nav>
+</header>
+
+<table style="width:100%" class="sout_table">
+  <tr class="list_col">
+     <th>Item name</th>
+     <th>Borrowed by</th>
+     <th>Date borrowed</th>
+     <th>Date to be returned</th>
+     <th>Date returned</th>
+     <th>Edit</th>
+     <th>Show</th>
+     <th>Delete</th>
+  </tr>
+
+ <% @souts.where("created_at >=?", Time.now.beginning_of_day).each do |sout| %>
+
+  <tr class="<%= cycle('list_line_even','list_line_odd')%>">
+     <td><%= sout.item_name %></td>
+     <td><%= sout.borrowed_by %></td>
+     <td><%= sout.date_borrowed %></td>
+     <td><%= sout.date_to_be_returned %></td>
+      <% if sout.date_returned == nil %>
+        <td><%= link_to "Sign back in", sout_sign_out_path(sout), method: :put %></td>
+      <% else %>
+         <td><%= sout.date_returned %></td>
+      <% end %>
+     <th><%= link_to 'Edit', edit_sout_path(sout)%></th>
+     <th><%= link_to 'Show', sout %></th>
+     <th><%= link_to 'Delete', sout, method: :delete, data: { confirm: 'Are you sure?' } %></th>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+<footer>
+<h3>Titan Lenders Corp</h3>
+</footer>
