@@ -9,6 +9,9 @@
 <body>
 
 <%= yield %>
+<%= link_to image_tag("titanlogo.jpg", alt: "Titan lenders corporation"), 
+                 {:controller => 'souts', :action => 'index'}, 
+                 {:class => 'webLogo'}%>
 
 </body>
 </html>
